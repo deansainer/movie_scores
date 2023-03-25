@@ -25,6 +25,7 @@ class Movie(models.Model):
         return self.name
 
 
+
 class SeriesGenre(models.Model):
     genre = models.CharField(max_length=55)
 
