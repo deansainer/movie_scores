@@ -1,0 +1,34 @@
+{% extends 'movie_app/base.html' %}
+{% load static %}
+{% block head %}
+<head>
+    <meta charset="UTF-8">
+    <title>Game List</title>
+</head>
+{% endblock %}
+{% block body %}
+<div class="lista">
+    <table class="table table-dark table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Game ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Release year</th>
+            <th scope="col">Genre</th>
+            <th scope="col">Score</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for game in games %}
+        <tr>
+            <th scope="row">{{game.id}}</th>
+            <td>{{game.name}}</td>
+            <td>{{game.release_date}}</td>
+            <td>{{game.genre}}</td>
+            <td><h5>{{game.score}}</h5></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
