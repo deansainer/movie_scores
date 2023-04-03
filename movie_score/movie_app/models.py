@@ -17,7 +17,7 @@ class MovieScore(models.Model):
 
 class Movie(models.Model):
     name = models.CharField(max_length=55)
-    release_date = models.IntegerField(max_length=4)
+    release_date = models.IntegerField()
     genre = models.ForeignKey(MovieGenre, on_delete=models.CASCADE)
     score = models.ForeignKey(MovieScore, on_delete=models.CASCADE)
 
@@ -42,7 +42,7 @@ class SeriesScore(models.Model):
 
 class Series(models.Model):
     name = models.CharField(max_length=55)
-    release_date = models.IntegerField(max_length=4)
+    release_date = models.IntegerField()
     genre = models.ForeignKey(MovieGenre, on_delete=models.CASCADE)
     score = models.ForeignKey(MovieScore, on_delete=models.CASCADE)
 
@@ -65,7 +65,7 @@ class GameScore(models.Model):
 
 class Game(models.Model):
     name = models.CharField(max_length=55)
-    release_date = models.IntegerField(max_length=4)
+    release_date = models.IntegerField()
     genre = models.ForeignKey(MovieGenre, on_delete=models.CASCADE)
     score = models.ForeignKey(MovieScore, on_delete=models.CASCADE)
 
