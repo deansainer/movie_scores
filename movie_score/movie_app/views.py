@@ -24,16 +24,16 @@ def game_list(request):
     return render(request, 'movie_app/game_list.html', context)
 
 
-class MovieApiView(generics.ListAPIView):
+class MovieViewSet(viewsets.ModelViewSet):
     queryset = Movie.objects.all()
     serializer_class = MovieSerializer
 
 
-class SeriesApiView(generics.ListAPIView):
+class SeriesViewSet(viewsets.ModelViewSet):
     queryset = Series.objects.all()
     serializer_class = SeriesSerializer
 
 
-class GameApiView(generics.ListAPIView):
+class GameViewSet(viewsets.ModelViewSet):
     queryset = Game.objects.all()
     serializer_class = GameSerializer
