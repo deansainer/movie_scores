@@ -13,6 +13,5 @@ urlpatterns = [
     path('series_list/', views.series_list, name='series_list'),
     path('game_list/', views.game_list, name='game_list'),
     path('api/', include(router.urls)),
-
 ]
 
