@@ -14,3 +14,5 @@ urlpatterns = [
     path('game_list/', views.game_list, name='game_list'),
     path('api/', include(router.urls)),
 ]
+
+
